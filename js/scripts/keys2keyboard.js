@@ -11,7 +11,7 @@ document.onkeyup = function(e){
 var Key = {
 	_pressed: {},
 	_release_time: {},
-	
+
 	MAX_KEY_DELAY : 20, //might wanna tune this up
 	onKeydown: function(e){
 		var time = new Date().getTime();
@@ -19,66 +19,135 @@ var Key = {
 		time < this._release_time[e.keyCode] + this.MAX_KEY_DELAY){
 			return false;
 		}
-		
+
 		this._pressed[e.keyCode] = true;
 		var charCode = e.keyCode;
 		  switch(charCode){
-			  case 90: synth.triggerAttack("C3"); break; //Z Key alert("z");
-			  case 83: synth.triggerAttack("C#3"); break; //S Key
-			  case 88: synth.triggerAttack("D3"); break; //X Key
-			  case 68: synth.triggerAttack("D#3"); break; //D Key
-			  case 67: synth.triggerAttack("E3"); break; //C Key
-			  case 86: synth.triggerAttack("F3"); break; //V Key
-			  case 71: synth.triggerAttack("F#3"); break; //G Key
-			  case 66: synth.triggerAttack("G3"); break; //B Key
-			  case 72: synth.triggerAttack("G#3"); break; //H Key
-			  case 78: synth.triggerAttack("A3"); break; //N Key
-			  case 74: synth.triggerAttack("A#3"); break; //J Key
-			  case 77: synth.triggerAttack("B3"); break; //M Key
-			  case 188: synth.triggerAttack("C4"); break; //COMMA Key
-			  case 76: synth.triggerAttack("C#4"); break; //L Key
-			  case 190: synth.triggerAttack("D4"); break; //PERIOD Key
-			  case 186: synth.triggerAttack("D#4"); break; //SEMICOLON Key
-			  case 191: synth.triggerAttack("E4"); break; //FORWARDSLASH Key
-			  
-			  case 81: synth.triggerAttack("C4"); break; //Q Key
-			  case 50: synth.triggerAttack("C#4"); break; //2 Key
-			  case 87: synth.triggerAttack("D4"); break; //W Key
-			  case 51: synth.triggerAttack("D#4"); break; //3 Key
-			  case 69: synth.triggerAttack("E4"); break; //E Key
-			  case 82: synth.triggerAttack("F4"); break; //R Key
-			  case 53: synth.triggerAttack("F#4"); break; //5 Key
-			  case 84: synth.triggerAttack("G4"); break; //T Key
-			  case 54: synth.triggerAttack("G#4"); break; //6 Key
-			  case 89: synth.triggerAttack("A4"); break; //Y Key
-			  case 55: synth.triggerAttack("A#4"); break; //7 Key
-			  case 85: synth.triggerAttack("B4"); break; //U Key
-			  case 73: synth.triggerAttack("C5"); break; //I Key
-			  case 57: synth.triggerAttack("C#5"); break; //9 Key
-			  case 79: synth.triggerAttack("D5"); break; //O Key
-			  case 48: synth.triggerAttack("D#5"); break; //0 Key
-			  case 80: synth.triggerAttack("E5"); break; //P Key
-			  
-			  
+			  case 90: synth.triggerAttack("C3");
+				$('#C3').attr('id', 'triggered');
+				break; //Z Key alert("z");
+			  case 83: synth.triggerAttack("C#3");
+				$('#Cs3').attr('id', 'triggered');
+				break; //S Key
+			  case 88: synth.triggerAttack("D3");
+				$('#D3').attr('id', 'triggered');
+				break; //X Key
+			  case 68: synth.triggerAttack("D#3");
+				$('#Ds3').attr('id', 'triggered');
+				break; //D Key
+			  case 67: synth.triggerAttack("E3");
+				$('#E3').attr('id', 'triggered');
+				break; //C Key
+			  case 86: synth.triggerAttack("F3");
+				$('#F3').attr('id', 'triggered');
+				break; //V Key
+			  case 71: synth.triggerAttack("F#3");
+				$('#Fs3').attr('id', 'triggered');
+				break; //G Key
+			  case 66: synth.triggerAttack("G3");
+				$('#G3').attr('id', 'triggered');
+				break; //B Key
+			  case 72: synth.triggerAttack("G#3");
+				$('#Gs3').attr('id', 'triggered');
+				break; //H Key
+			  case 78: synth.triggerAttack("A3");
+				$('#A3').attr('id', 'triggered');
+				break; //N Key
+			  case 74: synth.triggerAttack("A#3");
+				$('#As3').attr('id', 'triggered');
+				break; //J Key
+			  case 77: synth.triggerAttack("B3");
+				$('#B3').attr('id', 'triggered');
+				break; //M Key
+			  case 188: synth.triggerAttack("C4");
+				$('#C4').attr('id', 'triggered');
+				break; //COMMA Key
+			  case 76: synth.triggerAttack("C#4");
+				$('#Cs4').attr('id', 'triggered');
+				break; //L Key
+			  case 190: synth.triggerAttack("D4");
+				$('#D4').attr('id', 'triggered');
+				break; //PERIOD Key
+			  case 186: synth.triggerAttack("D#4");
+				$('#Ds4').attr('id', 'triggered');
+				break; //SEMICOLON Key
+			  case 191: synth.triggerAttack("E4");
+				$('#E4').attr('id', 'triggered');
+				break; //FORWARDSLASH Key
+
+			  case 81: synth.triggerAttack("C4");
+				$('#C4').attr('id', 'triggered');
+				break; //Q Key
+			  case 50: synth.triggerAttack("C#4");
+				$('#Cs4').attr('id', 'triggered');
+				break; //2 Key
+			  case 87: synth.triggerAttack("D4");
+				$('#D4').attr('id', 'triggered');
+				break; //W Key
+			  case 51: synth.triggerAttack("D#4");
+				$('#Ds4').attr('id', 'triggered');
+				break; //3 Key
+			  case 69: synth.triggerAttack("E4");
+				$('#E4').attr('id', 'triggered');
+				break; //E Key
+			  case 82: synth.triggerAttack("F4");
+				$('#F4').attr('id', 'triggered');
+				break; //R Key
+			  case 53: synth.triggerAttack("F#4");
+				$('#Fs4').attr('id', 'triggered');
+				break; //5 Key
+			  case 84: synth.triggerAttack("G4");
+				$('#G4').attr('id', 'triggered');
+				break; //T Key
+			  case 54: synth.triggerAttack("G#4");
+				$('#Gs4').attr('id', 'triggered');
+				break; //6 Key
+			  case 89: synth.triggerAttack("A4");
+				$('#A4').attr('id', 'triggered');
+				break; //Y Key
+			  case 55: synth.triggerAttack("A#4");
+				$('#As4').attr('id', 'triggered');
+				break; //7 Key
+			  case 85: synth.triggerAttack("B4");
+				$('#B4').attr('id', 'triggered');
+				break; //U Key
+			  case 73: synth.triggerAttack("C5");
+				$('#C5').attr('id', 'triggered');
+				break; //I Key
+			  case 57: synth.triggerAttack("C#5");
+				$('#Cs5').attr('id', 'triggered');
+				break; //9 Key
+			  case 79: synth.triggerAttack("D5");
+				$('#D5').attr('id', 'triggered');
+				break; //O Key
+			  case 48: synth.triggerAttack("D#5");
+				$('#Ds5').attr('id', 'triggered');
+				break; //0 Key
+			  case 80: synth.triggerAttack("E5");
+				$('#E5').attr('id', 'triggered');
+				break; //P Key
+
+
 			  default: break;
 		  }
 		noteStartTime =  new Date().getTime();
 	},
-	
+
 	onKeyup: function(e){
 		delete this._pressed[e.keyCode];
 		this._release_time[e.keyCode] = new Date().getTime();
 		var charCode = e.keyCode;
 		switch(charCode){
-			default: synth.triggerRelease(); break;
+			default: synth.triggerRelease();
+			break;
 		}
 		noteEndTime =  new Date().getTime();
 		var dTime = TimeDelta(noteStartTime, noteEndTime);
 		//do call to BeatMapper here
 	}
-	
+
 }
-	
+
 function TimeDelta(start, end){
 	return end - start;
 }
