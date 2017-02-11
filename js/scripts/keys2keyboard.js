@@ -138,8 +138,112 @@ var Key = {
 		this._release_time[e.keyCode] = new Date().getTime();
 		var charCode = e.keyCode;
 		switch(charCode){
-			default: synth.triggerRelease();
-			break;
+			  case 90: synth.triggerRelease();
+				$('#C3').removeAttr('id');//.attr('id', '#C3');
+				break; //Z Key alert("z");
+			  case 83: synth.triggerRelease();
+				$('#Cs3').removeAttr('id').attr('id', '#Cs3');
+				break; //S Key
+			  case 88: synth.triggerRelease();
+				$('#D3').removeAttr('id').attr('id', '#D3');
+				break; //X Key
+			  case 68: synth.triggerRelease();
+				$('#Ds3').removeAttr('id').attr('id', '#Ds3');
+				break; //D Key
+			  case 67: synth.triggerRelease();
+				$('#E3').attr('id', 'triggered');
+				break; //C Key
+			  case 86: synth.triggerRelease();
+				$('#F3').attr('id', 'triggered');
+				break; //V Key
+			  case 71: synth.triggerRelease();
+				$('#Fs3').attr('id', 'triggered');
+				break; //G Key
+			  case 66: synth.triggerRelease();
+				$('#G3').attr('id', 'triggered');
+				break; //B Key
+			  case 72: synth.triggerRelease();
+				$('#Gs3').attr('id', 'triggered');
+				break; //H Key
+			  case 78: synth.triggerRelease();
+				$('#A3').attr('id', 'triggered');
+				break; //N Key
+			  case 74: synth.triggerRelease();
+				$('#As3').attr('id', 'triggered');
+				break; //J Key
+			  case 77: synth.triggerRelease();
+				$('#B3').attr('id', 'triggered');
+				break; //M Key
+			  case 188: synth.triggerRelease();
+				$('#C4').attr('id', 'triggered');
+				break; //COMMA Key
+			  case 76: synth.triggerRelease();
+				$('#Cs4').attr('id', 'triggered');
+				break; //L Key
+			  case 190: synth.triggerRelease();
+				$('#D4').attr('id', 'triggered');
+				break; //PERIOD Key
+			  case 186: synth.triggerAttackRelease();
+				$('#Ds4').attr('id', 'triggered');
+				break; //SEMICOLON Key
+			  case 191: synth.triggerAttackRelease();
+				$('#E4').attr('id', 'triggered');
+				break; //FORWARDSLASH Key
+
+			  case 81: synth.triggerAttackRelease();
+				$('#C4').attr('id', 'triggered');
+				break; //Q Key
+			  case 50: synth.triggerAttackRelease();
+				$('#Cs4').attr('id', 'triggered');
+				break; //2 Key
+			  case 87: synth.triggerAttackRelease();
+				$('#D4').attr('id', 'triggered');
+				break; //W Key
+			  case 51: synth.triggerAttackRelease();
+				$('#Ds4').attr('id', 'triggered');
+				break; //3 Key
+			  case 69: synth.triggerAttackRelease();
+				$('#E4').attr('id', 'triggered');
+				break; //E Key
+			  case 82: synth.triggerAttackRelease();
+				$('#F4').attr('id', 'triggered');
+				break; //R Key
+			  case 53: synth.triggerAttackRelease();
+				$('#Fs4').attr('id', 'triggered');
+				break; //5 Key
+			  case 84: synth.triggerAttackRelease();
+				$('#G4').attr('id', 'triggered');
+				break; //T Key
+			  case 54: synth.triggerAttackRelease();
+				$('#Gs4').attr('id', 'triggered');
+				break; //6 Key
+			  case 89: synth.triggerAttackRelease();
+				$('#A4').attr('id', 'triggered');
+				break; //Y Key
+			  case 55: synth.triggerAttackRelease();
+				$('#As4').attr('id', 'triggered');
+				break; //7 Key
+			  case 85: synth.triggerAttackRelease();
+				$('#B4').attr('id', 'triggered');
+				break; //U Key
+			  case 73: synth.triggerAttackRelease();
+				$('#C5').attr('id', 'triggered');
+				break; //I Key
+			  case 57: synth.triggerAttackRelease();
+				$('#Cs5').attr('id', 'triggered');
+				break; //9 Key
+			  case 79: synth.triggerAttackRelease();
+				$('#D5').attr('id', 'triggered');
+				break; //O Key
+			  case 48: synth.triggerAttackRelease();
+				$('#Ds5').attr('id', 'triggered');
+				break; //0 Key
+			  case 80: synth.triggerAttackRelease();
+				$('#E5').attr('id', 'triggered');
+				break; //P Key
+
+
+			  default: break;
 		}
 		noteEndTime =  new Date().getTime();
 		var dTime = TimeDelta(noteStartTime, noteEndTime);
