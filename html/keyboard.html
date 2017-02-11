@@ -15,22 +15,31 @@
   <style>
     body, html {
     }
+    #container {
+      position: absolute;
+      width: 100%;
+      bottom: 50px;
+    }
     #keyboard {
       height: 200px;
-      width: 100%;
+      width: 650px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .key {
-      border: solid 1px grey;
       height: 100%;
-      width: 20px;
+      width: 40px;
       vertical-align: top;
+      display: inline-block;
+      border: solid 1px grey;
+      border-radius: 4px;
       -webkit-transition: background-color 0.5s;
       transition: background-color 0.5s;
     }
     .white {
       background-color: white;
       position: relative;
-      left: 10px;
+      left: 20px;
     }
     .black {
       background-color: black;
@@ -42,31 +51,33 @@
       background-color: grey;
     }
   </style>
-  <div id="keyboard">
-    <button id="1 c"  class="white key"></button>
-    <button id="1 db" class="black key"></button>
-    <button id="1 d"  class="white key"></button>
-    <button id="1 eb" class="black key"></button>
-    <button id="1 e"  class="white key"></button>
-    <button id="1 f"  class="white key"></button>
-    <button id="1 gb" class="black key"></button>
-    <button id="1 g"  class="white key"></button>
-    <button id="1 ab" class="black key"></button>
-    <button id="1 a"  class="white key"></button>
-    <button id="1 bb" class="black key"></button>
-    <button id="1 b"  class="white key"></button>
-    <button id="2 c"  class="white key"></button>
-    <button id="2 db" class="black key"></button>
-    <button id="2 d"  class="white key"></button>
-    <button id="2 eb" class="black key"></button>
-    <button id="2 e"  class="white key"></button>
-    <button id="2 f"  class="white key"></button>
-    <button id="2 gb" class="black key"></button>
-    <button id="2 g"  class="white key"></button>
-    <button id="2 ab" class="black key"></button>
-    <button id="2 a"  class="white key"></button>
-    <button id="2 bb" class="black key"></button>
-    <button id="2 b"  class="white key"></button>
+  <div id="container">
+    <div id="keyboard">
+      <button id="1 c"  class="white key"></button>
+      <button id="1 db" class="black key"></button>
+      <button id="1 d"  class="white key"></button>
+      <button id="1 eb" class="black key"></button>
+      <button id="1 e"  class="white key"></button>
+      <button id="1 f"  class="white key"></button>
+      <button id="1 gb" class="black key"></button>
+      <button id="1 g"  class="white key"></button>
+      <button id="1 ab" class="black key"></button>
+      <button id="1 a"  class="white key"></button>
+      <button id="1 bb" class="black key"></button>
+      <button id="1 b"  class="white key"></button>
+      <button id="2 c"  class="white key"></button>
+      <button id="2 db" class="black key"></button>
+      <button id="2 d"  class="white key"></button>
+      <button id="2 eb" class="black key"></button>
+      <button id="2 e"  class="white key"></button>
+      <button id="2 f"  class="white key"></button>
+      <button id="2 gb" class="black key"></button>
+      <button id="2 g"  class="white key"></button>
+      <button id="2 ab" class="black key"></button>
+      <button id="2 a"  class="white key"></button>
+      <button id="2 bb" class="black key"></button>
+      <button id="2 b"  class="white key"></button>
+    </div>
   </div>
 </body>
 <footer>
